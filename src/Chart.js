@@ -226,7 +226,6 @@ const Chart = () => {
                                 <circle class="path" cx="25" cy="25" r="5" fill="none" stroke-width="1"></circle>
                             </svg>
                         }
-
                     </svg>
                 </div>
                 <div>
@@ -247,14 +246,8 @@ const Chart = () => {
                         </div>
                     )
                 })}
-
             </div>
-
         </div>
-
-
-
-
     );
 }
 
