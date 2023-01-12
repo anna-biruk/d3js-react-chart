@@ -1,0 +1,116 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 40px;
+     
+}
+
+.chart{
+    display: flex;
+    flex-direction: column;
+}
+.changeColorButton{
+    display: block; 
+    margin: 0 auto;
+    margin-top: 30px; 
+    background-color: white;
+    border: 1px solid #2020b8;
+    color: black;
+    font-size: 14px;
+    padding: 10px;
+}
+.information{
+    max-width: 150px;
+    height: fit-content;
+    padding: 15px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+    position: relative;
+}
+
+.spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+}
+.spinner .path {
+  stroke: blue;
+  stroke-linecap: round;
+  animation: dash 1s ease-in-out infinite;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+ }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+ }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+ }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+ }
+}
+
+
+
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    opacity: 0.3;
+  }
+  .close:hover {
+    opacity: 1;
+  }
+  .close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 15px;
+    width: 2px;
+    background-color: rgb(21, 21, 21);
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+  
+path.line {
+    fill: none;
+    stroke: blue;
+    stroke-width: 3px;
+  }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: slategray;
+  shape-rendering: crispEdges;
+}
+line.x,
+line.y,
+circle.y {
+  stroke: rgb(0, 51, 255);
+}
